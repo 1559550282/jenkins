@@ -20,7 +20,7 @@ sam deploy --template-file packaged.yaml --stack-name $SAMSTACKNAME --capabiliti
 
   }
   environment {
-    S3BUCKET = 'linjungz-serverless-cicd-demo'
+    S3BUCKET = 'sharon199'
     S3PREFIX = 'build'
     SAMSTACKNAME = 'serverless-cicd-demo-stack'
   }
