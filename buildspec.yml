@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+
+  pre_build:
+    commands:
+      - pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+  build:
+    commands:
+      - sam build
+      - sam package --output-template-file packaged.yaml --s3-bucket $S3BUCKET --s3-prefix $S3PREFIX
+      - aws s3 cp packaged.yaml s3://$S3BUCKET/$S3PREFIX/
