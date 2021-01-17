@@ -13,7 +13,7 @@ pipeline {
       steps {
         input 'Need approve'
         echo 'Deploy application'
-        sh '''aws s3 cp s3://$S3BUCKET/$S3PREFIX/packaged.yaml .
+        sh '''aws s3 cp s3://sharon199/build/packaged.yaml .
 /usr/local/bin/sam deploy --template-file packaged.yaml --stack-name $SAMSTACKNAME --capabilities CAPABILITY_IAM --region cn-northwest-1
 '''
       }
