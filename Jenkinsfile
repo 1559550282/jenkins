@@ -13,8 +13,7 @@ pipeline {
       steps {
         input 'Need Approval for Deployment'
         echo 'Now deploy application'
-        sh '''aws s3 cp s3://sharon199/build/packaged.yaml .
-sam deploy --template-file packaged.yaml --stack-name Jenkins-test --capabilities CAPABILITY_IAM --region cn-northwest-1'''
+        sh 'aws s3 cp s3://sharon199/build/packaged.yaml .'
       }
     }
 
