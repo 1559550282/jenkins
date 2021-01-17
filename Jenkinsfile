@@ -14,7 +14,7 @@ pipeline {
         input 'Need Approval for Deployment'
         echo 'Now deploy application'
         sh '''aws s3 cp s3://$S3BUCKET/$S3PREFIX/packaged.yaml .
-sam deploy --template-file packaged.yaml --stack-name $SAMSTACKNAME --capabilities CAPABILITY_IAM --region cn-northwest-1'''
+/usr/local/bin/sam deploy --template-file packaged.yaml --stack-name $SAMSTACKNAME --capabilities CAPABILITY_IAM --region cn-northwest-1'''
       }
     }
 
