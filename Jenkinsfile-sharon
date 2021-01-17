@@ -21,7 +21,7 @@ pipeline {
 
   }
   environment {
-    bucketName = 'sharon199'
+    S3BUCKET = 'sharon199'
     prefix = 'sharonbuild'
     stakename = 'sam_lambda'
   }
