@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Pipeline for Test Env'
-        build 'codebuild-sam'
+        build 'jenkins'
         echo 'Finished build'
       }
     }
