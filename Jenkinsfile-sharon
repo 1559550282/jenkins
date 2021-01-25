@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'begin build'
-        build 'jenkins'
+        build 'codebuild-sam'
         echo 'end build'
       }
     }
